@@ -10,10 +10,11 @@
 #         self.wfile.write(message.encode())
 #         return
 
-from flask import Flask, Response
+from flask import Flask, Response, render_template
 app = Flask(__name__)
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
 def catch_all(path):
-    return Response("<h1>Flask</h1><p>You visited: /%s</p>" % (path), mimetype="text/html")
+    # return Response("<h1>Flask</h1><p>You visited: /%s</p>" % (path), mimetype="text/html")
+    return render_template('hello.html')
