@@ -6,10 +6,9 @@
 #         self.send_response(200)
 #         self.send_header('Content-type','text/plain')
 #         self.end_headers()
-#         message = 'Ayan Mullick 123'
+#         message = 'Ayan Mullick'
 #         self.wfile.write(message.encode())
 #         return
-
 
 from flask import Flask, Response
 app = Flask(__name__)
